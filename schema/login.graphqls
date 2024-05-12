@@ -1,0 +1,22 @@
+
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type TblUser{
+    id:        Int!
+    firstname: String!
+    lastname : String!
+    email:     String!
+    userName:  String!
+    password:  String!
+}
+
+input Login{
+    username : String!
+    Password : String!
+}
+
+extend type Mutation{
+    login(login:Login!): Boolean
+}
